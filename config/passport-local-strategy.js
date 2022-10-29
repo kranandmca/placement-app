@@ -9,6 +9,7 @@ passport.use(
       passReqToCallback: true,
     },
     function (req, email, password, done) {
+      console.log('rammmmmmm');
       // find a user and establish a identity
       User.findOne({ email: email }, function (err, user) {
         if (err) {
@@ -19,6 +20,7 @@ passport.use(
           req.flash('error', 'Invalid Username/Password');
           return done(null, false);
         }
+
         return done(null, user);
       });
     }

@@ -1,0 +1,10 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .main-container .allocate {
+    display: flex;
+    flex-direction: column; }
+    .main-container .allocate .allocate-label {
+      align-self: center; }
