@@ -27,3 +27,6 @@ A company constantly needs to download their data to compile different reports. 
 - Do npm install to intsall packages
 - Do npm start to start local server
 Your project is set up and running!. You can check with url localhost:8000
+You can sign up as a employee or use below employee login:
+email: ram@gmail.com
+password: 123
