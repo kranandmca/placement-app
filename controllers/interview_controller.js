@@ -2,7 +2,7 @@ const Interview = require('../models/interviews');
 const Student = require('../models/students');
 const Result = require('../models/interviews_results');
 const moment = require('moment');
-
+// Create an interview
 module.exports.create = async function (req, res) {
   try {
     let interview = await Interview.create(req.body);
@@ -12,7 +12,7 @@ module.exports.create = async function (req, res) {
     console.log(err);
   }
 };
-
+// Allocate student to an interview
 module.exports.allocate = async function (req, res) {
   try {
     let interview = await Interview.findById(req.body.interview);
@@ -21,25 +21,27 @@ module.exports.allocate = async function (req, res) {
     interview.save();
     student.interviews.push(req.body.interview);
     student.save();
-    if (req.body.interview == '') {
-      req.flash('error', 'Please enter select');
-      return res.redirect('/');
-    }
+
     req.flash('success', 'Student  allocated to Interview Successfully');
     return res.redirect('/');
   } catch (err) {
     console.log(err);
   }
 };
-
+// List All Interviews and their students
 module.exports.interview = async function (req, res) {
   let interviews = await Interview.findById(req.params.id);
 
   students = await Student.find({ _id: { $nin: interviews.students } });
   let interview_students = await Student.find({
     _id: { $in: interviews.students },
+    // interviews_results: { $in: req.params.id },
+  }).populate({
+    path: 'interviews_results',
+    model: Result,
+    match: { interview: req.params.id },
+    select: 'result',
   });
-
   return res.render('interview', {
     title: 'Interview',
     students: students,
@@ -48,7 +50,7 @@ module.exports.interview = async function (req, res) {
     moment: moment,
   });
 };
-
+// Assign Result of student for interview
 module.exports.result = async function (req, res) {
   try {
     let statusv = '';

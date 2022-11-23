@@ -2,6 +2,7 @@ const Student = require('../models/students');
 const Course = require('../models/courses');
 const Course_Score = require('../models/course_scores');
 
+// Create student along with course scores
 module.exports.create = async function (req, res) {
   try {
     let existing_student = await Student.findOne({ email: req.body.email });

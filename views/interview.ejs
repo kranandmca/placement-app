@@ -6,7 +6,7 @@
       >Company Name: <%= interviews.company_name %>
     </label>
     <label id="allocate-label"
-      >Interview Date: <%= interviews.interview_date %>
+      >Interview Date:  <%=moment(interviews.interview_date).format( 'DD-MM-YYYY', )%>
     </label>
     <% if(!interviews) {%>
     <!-- <label> All Students Allocated</label> -->
@@ -20,6 +20,7 @@
       <select
         required
         name="student"
+       
         id="student"
         style="padding: 10px; width: 250px"
       >
@@ -49,19 +50,25 @@
             <th>Name</th>
             <th>College</th>
             <th>Status</th>
+            <th>Interview Result</th>
           </tr>
         </thead>
         <tbody>
-          <% for(student of interview_students){ %>
+          <% let res; %>
+          <% for(student of interview_students){res=null %>
           <tr>
             <td><%=student.email%></td>
             <td><%=student.name%></td>
             <td><%=student.college%></td>
+            <% for(result of student.interviews_results){   res= result.result; %>
+               
+              <%} %>
             <td><%=student.status%></td>
+            <td><%=res%></td>
             <td>
               <ul  >
                 <li style="list-style-type: none;display:inline">
-                  <select name="status"  >
+                  <select name="status"   >
                     <option value="">Select Status</option>
                     <option value="pass">PASS</option>
                     <option value="fail">FAIL</option>

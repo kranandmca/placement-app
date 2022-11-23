@@ -63,13 +63,35 @@
         
         <input type="submit" id="add-student" value="Add Student" />
       </form>
-    
+      Student List
       <form >
        
-        <div >
+        <div style=" overflow: auto;height:auto">
         <table class="student-list" >
          
-         
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Name</th>
+              <th>College</th>
+              <th>Status</th>
+             
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <% for(student of students){ %>
+            <tr>
+              <td><%=student.email%></td>
+              <td><%=student.name%></td>
+              <td><%=student.college%></td>
+              <td><%=student.status%></td>
+              
+            </tr>
+           
+          </tbody>
+          <% } %>
         </table>
       </form>
     </div>
@@ -105,7 +127,7 @@
 
       <!-- Interview List -->
       <form method="post" action="/interviews/allocate">
-        <div style=" overflow: auto;height:150px">
+        <div style=" overflow: auto;height:auto">
         <table class="interview-list">
           <caption>
             Interview List
@@ -135,9 +157,9 @@
         </table>
       </div>
       </form>
-      Student List
+      Student Interview Record
       <form action="reports/export">
-        <input type="submit" value="Export Data">
+        <input type="submit" style="padding:0.5rem" value="Export Data">
         <div style=" overflow: auto;height:auto">
         <table class="student-list" >
          

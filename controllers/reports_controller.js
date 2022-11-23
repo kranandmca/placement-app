@@ -6,7 +6,7 @@ const Course_Score = require('../models/course_scores');
 const { Parser } = require('json2csv');
 
 const Result = require('../models/interviews_results');
-
+// Export student record into csv file
 module.exports.export = async function (req, res) {
   let results = await Result.find()
     .populate({
@@ -22,10 +22,6 @@ module.exports.export = async function (req, res) {
       },
     });
   const fields = [
-    {
-      label: 'Student Id',
-      value: 'user._id',
-    },
     {
       label: 'Student Id',
       value: 'user._id',

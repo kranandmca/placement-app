@@ -8,6 +8,8 @@ const { Parser } = require('json2csv');
 
 const Result = require('../models/interviews_results');
 const moment = require('moment');
+
+// Getting all data for Home page
 module.exports.home = async function (req, res) {
   let interviews = await Interview.find({});
   let courses = await Course.find({});
