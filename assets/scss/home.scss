@@ -12,13 +12,13 @@
       }
       form {
         max-width: 500px;
-        height: 200px;
-        padding: 0.5rem;
+
         margin: 1rem 1rem 1rem 1rem;
         border: 1px solid lightblue;
 
         .form-group {
-          input {
+          input,
+          select {
             width: 483px;
             outline: none;
             padding: 0.5rem;
@@ -63,18 +63,34 @@
     flex-wrap: wrap;
     flex-direction: column;
     .interview-add-list-form {
+      .student-list {
+        max-width: 580px;
+        border-collapse: collapse;
+        table {
+          max-width: 600px;
+        }
+
+        th,
+        td {
+          padding: 0.5rem;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+
       .form-label {
         margin: 1rem;
       }
       form {
         max-width: 700px;
-        height: 150px;
+
         padding: 0.5rem;
         margin: 1rem 1rem 1rem 1rem;
         border: 1px solid lightblue;
 
         .form-group {
-          input {
+          input,
+          select {
             width: 483px;
             outline: none;
             padding: 0.5rem;

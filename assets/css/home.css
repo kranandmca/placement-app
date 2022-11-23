@@ -10,11 +10,10 @@
       margin: 1rem; }
     .main-container .main-container-left .student-add-list-form form {
       max-width: 500px;
-      height: 200px;
-      padding: 0.5rem;
       margin: 1rem 1rem 1rem 1rem;
       border: 1px solid lightblue; }
-      .main-container .main-container-left .student-add-list-form form .form-group input {
+      .main-container .main-container-left .student-add-list-form form .form-group input,
+      .main-container .main-container-left .student-add-list-form form .form-group select {
         width: 483px;
         outline: none;
         padding: 0.5rem;
@@ -42,15 +41,25 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column; }
+    .main-container .main-container-right .interview-add-list-form .student-list {
+      max-width: 580px;
+      border-collapse: collapse; }
+      .main-container .main-container-right .interview-add-list-form .student-list table {
+        max-width: 600px; }
+      .main-container .main-container-right .interview-add-list-form .student-list th,
+      .main-container .main-container-right .interview-add-list-form .student-list td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd; }
     .main-container .main-container-right .interview-add-list-form .form-label {
       margin: 1rem; }
     .main-container .main-container-right .interview-add-list-form form {
       max-width: 700px;
-      height: 150px;
       padding: 0.5rem;
       margin: 1rem 1rem 1rem 1rem;
       border: 1px solid lightblue; }
-      .main-container .main-container-right .interview-add-list-form form .form-group input {
+      .main-container .main-container-right .interview-add-list-form form .form-group input,
+      .main-container .main-container-right .interview-add-list-form form .form-group select {
         width: 483px;
         outline: none;
         padding: 0.5rem;

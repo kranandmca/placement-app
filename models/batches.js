@@ -1,17 +1,21 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema(
+const batchSchema = new mongoose.Schema(
   {
-    email: {
+    name: {
       type: String,
       required: true,
       unique: true,
     },
-    password: {
+    startdate: {
       type: String,
       required: true,
     },
-    name: {
+    enddate: {
+      type: String,
+      required: true,
+    },
+    status: {
       type: String,
       required: true,
     },
@@ -19,6 +23,6 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const User = mongoose.model('User', userSchema);
+const Batches = mongoose.model('Batches', batchSchema);
 
-module.exports = User;
+module.exports = Batches;

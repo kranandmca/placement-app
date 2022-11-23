@@ -8,3 +8,13 @@
     flex-direction: column; }
     .main-container .allocate .allocate-label {
       align-self: center; }
+  .main-container .student-list {
+    max-width: 580px;
+    border-collapse: collapse; }
+    .main-container .student-list table {
+      max-width: 600px; }
+    .main-container .student-list th,
+    .main-container .student-list td {
+      padding: 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd; }

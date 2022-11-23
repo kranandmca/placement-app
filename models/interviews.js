@@ -15,13 +15,13 @@ const interviewSchema = new mongoose.Schema(
     students: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'student',
+        ref: 'students',
       },
     ],
   },
   { timestamps: true }
 );
 
-const Interview = mongoose.model('Interview', interviewSchema);
+const Interviews = mongoose.model('Interviews', interviewSchema);
 
-module.exports = Interview;
+module.exports = Interviews;

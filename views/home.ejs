@@ -36,42 +36,43 @@
           />
         </div>
         <div class="form-group">
-          <input
-            type="text"
-            name="status"
-            id="status"
-            placeholder="Status"
-            required
-          />
+          <select name="status" required>
+            <option value="">Select Status</option>
+            <option value="placed">Placed</option>
+            <option value="not placed">Not Placed</option>
+          </select>
         </div>
+        <div class="form-group">
+          <select name="batch" required>
+            <option value="">Select Batch</option>
+            <% for(batch of batches){ %>
+            <option value="<%= batch._id %>"><%= batch.name %></option>
+            <%}%>
+          </select>
+        </div>
+        <div class="form-group">
+            <% for(course of courses){ %>
+              <input
+              type="number"
+              name="score[]"
+              placeholder="<%= course.name %> Score"
+              required
+            />
+            <%}%>
+        </div>
+        
         <input type="submit" id="add-student" value="Add Student" />
       </form>
-      <!-- Student List -->
-      <form>
-        <table class="student-list">
-          <caption>
-            Student List
-          </caption>
-          <thead>
-            <tr>
-              <th>Email</th>
-              <th>Name</th>
-              <th>College</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for(student of students){ %>
-            <tr>
-              <td><%=student.email%></td>
-              <td><%=student.name%></td>
-              <td><%=student.college%></td>
-              <td><%=student.status%></td>
-            </tr>
-          </tbody>
-          <% } %>
+    
+      <form >
+       
+        <div >
+        <table class="student-list" >
+         
+         
         </table>
       </form>
+    </div>
     </div>
   </div>
   <!-- right part -->
@@ -104,6 +105,7 @@
 
       <!-- Interview List -->
       <form method="post" action="/interviews/allocate">
+        <div style=" overflow: auto;height:150px">
         <table class="interview-list">
           <caption>
             Interview List
@@ -131,8 +133,52 @@
             <% } %>
           </tbody>
         </table>
+      </div>
+      </form>
+      Student List
+      <form action="reports/export">
+        <input type="submit" value="Export Data">
+        <div style=" overflow: auto;height:auto">
+        <table class="student-list" >
+         
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Name</th>
+              <th>College</th>
+              <th>Status</th>
+              <th>DSA Score</th>
+              <th>WebD Score</th>
+              <th>React Score</th>
+              <th>Interview date</th>
+              <th>Interview Company</th>
+
+              <th>Interview Result</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <% for(student of results){ %>
+            <tr>
+              <td><%=student.user.email%></td>
+              <td><%=student.user.name%></td>
+              <td><%=student.user.college%></td>
+              <td><%=student.user.status%></td>
+              <% for(data of student.user.course_scores){ %>
+              <td><%=data.score%></td>
+              <% } %>
+              <td><%=moment(student.interview.interview_date).format( 'DD-MM-YYYY', )%></td>
+              <td><%=student.interview.company_name%></td>
+              <td><%=student.result%></td>
+            </tr>
+           
+          </tbody>
+          <% } %>
+        </table>
       </form>
     </div>
+    
   </div>
 </div>
 

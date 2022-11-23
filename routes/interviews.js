@@ -16,4 +16,9 @@ router.post(
   passport.checkAuthentication,
   interviewsController.allocate
 );
+router.post(
+  '/result',
+  passport.checkAuthentication,
+  interviewsController.result
+);
 module.exports = router;

@@ -36,5 +36,56 @@
       />
     </form>
     <% } %>
+    <!-- Student List -->
+    <form method="post"    action="/interviews/result">
+      <div style=" overflow: auto;height:600px;">
+      <table class="student-list">
+        <caption>
+          Student List
+        </caption>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th>College</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(student of interview_students){ %>
+          <tr>
+            <td><%=student.email%></td>
+            <td><%=student.name%></td>
+            <td><%=student.college%></td>
+            <td><%=student.status%></td>
+            <td>
+              <ul  >
+                <li style="list-style-type: none;display:inline">
+                  <select name="status"  >
+                    <option value="">Select Status</option>
+                    <option value="pass">PASS</option>
+                    <option value="fail">FAIL</option>
+                    <option value="onhold">On Hold</option>
+                    <option value="notatmpt">Didn’t Attempt</option>
+                  </select>
+                </li>                
+              </ul>
+            </td>
+            <td>
+              <ul  >
+                <li style="list-style-type: none;display:inline">
+                  <input type="hidden" value="<%=student._id%>" name="student_id">
+                  <input type="hidden" value="<%=interviews._id%>" name="interview_id">
+                  <input type="submit" value="Submit">
+                </li>                
+              </ul>
+            </td>
+          </tr>
+
+        </tbody>
+        <% } %>
+       
+      </table>
+    </form>
   </div>
 </div>
