@@ -41,12 +41,12 @@ module.exports.create = function (req, res) {
           req.flash('error', err);
           return;
         }
-
+        req.flash('success', 'You have signed up, login to continue!');
         return res.redirect('/users/sign-in');
       });
     } else {
-      req.flash('success', 'You have signed up, login to continue!');
-      return res.redirect('back');
+      req.flash('error', 'User already exists!');
+      return res.redirect('/users/sign-in');
     }
   });
 };
