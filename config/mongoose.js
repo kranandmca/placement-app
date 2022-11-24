@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/placement');
+// For localhost
+//mongoose.connect('mongodb://localhost/placement');
+// For atlas
+mongoose.connect(
+  'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority'
+);
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Error connecting to mongodb'));
