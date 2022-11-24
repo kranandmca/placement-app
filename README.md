@@ -9,7 +9,7 @@ A company constantly needs to download their data to compile different reports. 
 -	Allocate a student to an interview
 -	Select an interview to view the list of all students and mark a result status from the list page itself
 - Export student record 
-# Languages & Tools Used 
+# Languages & Tools Used for development
 - Nodejs
 - Express
 - Mongoose
@@ -20,7 +20,10 @@ A company constantly needs to download their data to compile different reports. 
 - SCSS
 - MongoDB Compass
 - Visual Studio Code
-
+# Tools used for hosting
+- MongoDB Atlas
+- AWS
+- Putty
 # Live project Link
  http://3.110.183.96:3001/
 # Steps to set project locally[Windows]
