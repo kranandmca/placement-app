@@ -17,6 +17,7 @@ A company constantly needs to download their data to compile different reports. 
 - Javascript
 - EJS
 - CSS
+- SCSS
 - MongoDB Compass
 - Visual Studio Code
 
