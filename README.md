@@ -26,7 +26,7 @@ A company constantly needs to download their data to compile different reports. 
 - Putty
 # Live project Link
  http://3.110.183.96:3001/
- #You can create a new employee login or use below:
+ # You can create a new employee login or use below:
  email: ram@gmail.com
  password : 123
 # Steps to set project locally[Windows]
