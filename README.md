@@ -34,6 +34,6 @@ A company constantly needs to download their data to compile different reports. 
 -  Go to root  folder inside using terminal.
 - Do npm install to intsall packages
 - Change mongodb url in config/mongoose.js to mongodb://localhost/placement in mongoose.connect() method.
-- In index.js, change mongodb url to mongodb://localhost in MOngoStore.store() method.
+- In index.js, change mongodb url to mongodb://localhost in MongoStore.store() method.
 - Do npm start to start local server
 Your project is set up and running!. You can check with url localhost:8000
