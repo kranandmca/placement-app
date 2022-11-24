@@ -22,9 +22,8 @@ A company constantly needs to download their data to compile different reports. 
 - Visual Studio Code
 
 # Steps to set project locally[Windows]
-- Download project zip file : https://github.com/anandkumarmca6/placement-app/archive/refs/heads/master.zip
-- Extract zip file on your local system
-- Using Command Prompt, Go to extracted folder.
+- Go to terminal. Run git clone https://github.com/anandkumarmca6/placement-app.git
+-  Go to root  folder inside using terminal.
 - Do npm install to intsall packages
 - Do npm start to start local server
 Your project is set up and running!. You can check with url localhost:8000
