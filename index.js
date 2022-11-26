@@ -1,8 +1,11 @@
+require('dotenv').config();
 const express = require('express');
+const logger = require('morgan');
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
+const env = require('./config/environment');
 const flash = require('connect-flash');
 const session = require('express-session');
 //  set passport settings
@@ -15,22 +18,28 @@ const MongoStore = require('connect-mongo');
 const sassMiddleware = require('node-sass-middleware');
 
 const customMware = require('./config/middleware');
+const path = require('path');
+
 // set sass
-app.use(
-  sassMiddleware({
-    src: './assets/scss',
-    dest: './assets/css',
-    debug: true,
-    outputStyle: 'extended',
-    prefix: '/css',
-  })
-);
+if (env.name == 'development') {
+  app.use(
+    sassMiddleware({
+      src: path.join(__dirname, env.asset_path, 'scss'),
+      dest: path.join(__dirname, env.asset_path, 'css'),
+      debug: true,
+      outputStyle: 'extended',
+      prefix: '/css',
+    })
+  );
+}
+
 // set form encoded
 app.use(express.urlencoded({ extended: true }));
 //set cookie parser
 app.use(cookieParser());
 // set static folder path
-app.use(express.static('./assets'));
+app.use(express.static(env.asset_path));
+app.use(logger(env.morgan.mode, env.morgan.options));
 app.use(expressLayouts);
 // extract styles and scripts from sub pages into layout
 app.set('layout extractStyles', true);
@@ -42,7 +51,7 @@ app.set('views', './views');
 app.use(
   session({
     name: 'placement',
-    secret: '@1925',
+    secret: env.session_cookie_key,
     saveUninitialized: false,
     resave: false,
     cookie: {
@@ -50,8 +59,9 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl:
-          'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
+        mongoUrl: 'mongodb://localhost',
+        // mongoUrl:
+        //   'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
         dbName: 'placement',
         stringify: false,
         autoRemove: 'disabled',
