@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 443;
+const port = 3000;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 const flash = require('connect-flash');
