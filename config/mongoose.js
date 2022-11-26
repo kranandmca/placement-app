@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost/placement');
 // For atlas
 mongoose.connect(
-  'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority'
+  'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority&?directConnection=true'
 );
 const db = mongoose.connection;
 
