@@ -25,7 +25,7 @@ A company constantly needs to download their data to compile different reports. 
 - AWS
 - Putty
 # Live project Link
- http://3.110.183.96:3001/
+http://appplacement.com
  # You can create a new employee login or use below:
  email: ram@gmail.com
  password : 123
