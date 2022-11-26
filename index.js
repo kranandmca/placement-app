@@ -3,11 +3,11 @@ const express = require('express');
 const logger = require('morgan');
 const app = express();
 require('./config/view-helpers')(app);
+const env = require('./config/environment');
 
-const port = process.env.PORT;
+const port = env.port;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
-const env = require('./config/environment');
 const flash = require('connect-flash');
 const session = require('express-session');
 //  set passport settings

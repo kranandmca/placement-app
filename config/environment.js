@@ -14,6 +14,7 @@ const development = {
   asset_path: '/assets',
   session_cookie_key: '@1925',
   db: 'placement',
+  port:80,
   morgan: {
     mode: 'dev',
     options: { stream: accessLogStream },
@@ -25,6 +26,7 @@ const production = {
   asset_path: process.env.ASSET_PATH,
   session_cookie_key: process.env.SESSION_COOKIE_KEY,
   db: process.env.DB_NAME,
+  port:process.env.PORT,
   morgan: {
     mode: 'combined',
     options: { stream: accessLogStream },
