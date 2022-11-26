@@ -30,19 +30,9 @@ http://appplacement.com
  email: ram@gmail.com
  password : 123
 # Steps to set project locally[Windows]
-- Go to terminal. Run git clone https://github.com/anandkumarmca6/placement-app.git
--  Go to root  folder inside using terminal.
-- Do npm install to intsall packages
-- Change mongodb url in config/mongoose.js to mongodb://localhost/placement in mongoose.connect() method.
-- In index.js, change mongodb url to mongodb://localhost in MongoStore.store() method.
-- Change port in .env to 8000
-- Change below module export code of environment.js 
-module.exports = eval(
-  process.env.ENVIRONMENT == undefined
-    ? development
-    : eval(process.env.ENVIRONMENT)
-);
-with 
-module.exports = development
-- Do npm start to start local server
-Your project is set up and running!. You can check with url localhost:8000
+- Go to terminal. Run below command:
+     git clone https://github.com/anandkumarmca6/placement-app.git
+-  cd placement-app
+- npm install
+- npm start
+Your project is set up and running!. You can check with url localhost:80
