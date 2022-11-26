@@ -26,9 +26,7 @@ A company constantly needs to download their data to compile different reports. 
 - Putty
 # Live project Link
 http://appplacement.com
- # You can create a new employee login or use below:
- email: ram@gmail.com
- password : 123
+
 # Steps to set project locally[Windows]
 - Go to terminal. Run below command:
      git clone https://github.com/anandkumarmca6/placement-app.git
@@ -36,3 +34,6 @@ http://appplacement.com
 - npm install
 - npm start
 Your project is set up and running!. You can check with url localhost:80
+ # You can create a new employee login or use below:
+ email: ram@gmail.com
+ password : 123
