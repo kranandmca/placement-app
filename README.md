@@ -25,7 +25,7 @@ A company constantly needs to download their data to compile different reports. 
 - AWS
 - Putty
 # Live project Link
- http://3.110.183.96:3001/
+http://appplacement.com
  # You can create a new employee login or use below:
  email: ram@gmail.com
  password : 123
@@ -35,5 +35,14 @@ A company constantly needs to download their data to compile different reports. 
 - Do npm install to intsall packages
 - Change mongodb url in config/mongoose.js to mongodb://localhost/placement in mongoose.connect() method.
 - In index.js, change mongodb url to mongodb://localhost in MongoStore.store() method.
+- Change port in .env to 8000
+- Change below module export code of environment.js 
+module.exports = eval(
+  process.env.ENVIRONMENT == undefined
+    ? development
+    : eval(process.env.ENVIRONMENT)
+);
+with 
+module.exports = development
 - Do npm start to start local server
 Your project is set up and running!. You can check with url localhost:8000
