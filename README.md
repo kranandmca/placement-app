@@ -33,7 +33,7 @@ http://appplacement.com
 -  cd placement-app
 - npm install
 - npm start
- #Your project is set up and running!. You can check with url localhost:80
+ # Your project is set up and running!. You can check with url localhost:80
  # You can create a new employee login or use below:
  email: ram@gmail.com
  password : 123
