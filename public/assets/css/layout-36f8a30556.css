@@ -1,0 +1,11 @@
+html {
+  height: 100%; }
+  html body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%; }
+    html body #layout-main {
+      height: 100%; }

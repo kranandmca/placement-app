@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const logger = require('morgan');
 const app = express();
+require('./config/view-helpers')(app);
+
 const port = process.env.PORT;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
@@ -59,9 +61,9 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl: 'mongodb://localhost',
-        // mongoUrl:
-        //   'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
+        // mongoUrl: 'mongodb://localhost',
+        mongoUrl:
+          'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
         dbName: 'placement',
         stringify: false,
         autoRemove: 'disabled',

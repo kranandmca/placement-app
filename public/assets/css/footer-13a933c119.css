@@ -1,0 +1,17 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #2a2747; }
+  .footer-container .copyright {
+    font-size: 0.6rem;
+    font-weight: 600; }
+    .footer-container .copyright h1 {
+      color: white; }
+  .footer-container .footer-nav {
+    list-style-type: none; }
+    .footer-container .footer-nav li {
+      padding-bottom: 0.3rem; }
+    .footer-container .footer-nav a {
+      color: white;
+      text-decoration: none; }

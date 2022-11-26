@@ -1,0 +1,92 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .main-container .main-container-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .main-container .main-container-left .student-add-list-form .form-label {
+      margin: 1rem; }
+    .main-container .main-container-left .student-add-list-form form {
+      max-width: 500px;
+      margin: 1rem 1rem 1rem 1rem;
+      border: 1px solid lightblue; }
+      .main-container .main-container-left .student-add-list-form form .form-group input,
+      .main-container .main-container-left .student-add-list-form form .form-group select {
+        width: 483px;
+        outline: none;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: none;
+        border-bottom: 1px solid lightslategrey;
+        margin: 0.3rem; }
+      .main-container .main-container-left .student-add-list-form form #add-student {
+        padding: 0.5rem;
+        width: 10rem;
+        outline: none;
+        border: none;
+        cursor: pointer; }
+    .main-container .main-container-left .student-list {
+      max-width: 580px;
+      border-collapse: collapse; }
+      .main-container .main-container-left .student-list table {
+        max-width: 600px; }
+      .main-container .main-container-left .student-list th,
+      .main-container .main-container-left .student-list td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd; }
+  .main-container .main-container-right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .main-container .main-container-right .interview-add-list-form .student-list {
+      max-width: 580px;
+      border-collapse: collapse; }
+      .main-container .main-container-right .interview-add-list-form .student-list table {
+        max-width: 600px; }
+      .main-container .main-container-right .interview-add-list-form .student-list th,
+      .main-container .main-container-right .interview-add-list-form .student-list td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd; }
+    .main-container .main-container-right .interview-add-list-form .form-label {
+      margin: 1rem; }
+    .main-container .main-container-right .interview-add-list-form form {
+      max-width: 700px;
+      padding: 0.5rem;
+      margin: 1rem 1rem 1rem 1rem;
+      border: 1px solid lightblue; }
+      .main-container .main-container-right .interview-add-list-form form .form-group input,
+      .main-container .main-container-right .interview-add-list-form form .form-group select {
+        width: 483px;
+        outline: none;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: none;
+        border-bottom: 1px solid lightslategrey;
+        margin: 0.3rem; }
+      .main-container .main-container-right .interview-add-list-form form #add-interview {
+        padding: 0.5rem;
+        width: 10rem;
+        outline: none;
+        border: none;
+        cursor: pointer; }
+    .main-container .main-container-right .interview-list {
+      border-collapse: collapse;
+      max-width: 700px; }
+      .main-container .main-container-right .interview-list th,
+      .main-container .main-container-right .interview-list td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd; }
+      .main-container .main-container-right .interview-list #student-dropdown {
+        padding: 0.5rem;
+        width: 180px; }
+      .main-container .main-container-right .interview-list #allocate-interview {
+        padding: 0.5rem;
+        width: 10rem;
+        outline: none;
+        border: none;
+        cursor: pointer; }

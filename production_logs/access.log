@@ -1,1 +1,17 @@
 ::1 - - [26/Nov/2022:09:03:21 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+[0mGET / [31m500[0m 1513.287 ms - 1502[0m
+[0mGET / [31m500[0m 255.822 ms - 1502[0m
+[0mGET / [31m500[0m 94.206 ms - 1502[0m
+[0mGET / [31m500[0m 55.118 ms - 1502[0m
+[0mGET / [31m500[0m 239.540 ms - 148[0m
+[0mGET / [31m500[0m 73.758 ms - 148[0m
+[0mGET / [0m-[0m - ms - -[0m
+[0mGET / [0m-[0m - ms - -[0m
+[0mGET / [32m200[0m 1090.951 ms - 1229[0m
+::1 - - [26/Nov/2022:10:53:09 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [26/Nov/2022:10:53:10 +0000] "GET / HTTP/1.1" 500 148 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [26/Nov/2022:10:54:07 +0000] "GET / HTTP/1.1" 200 1265 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [26/Nov/2022:10:54:09 +0000] "GET /users/sign-in HTTP/1.1" 200 1462 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [26/Nov/2022:10:54:15 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [26/Nov/2022:10:54:15 +0000] "GET / HTTP/1.1" 200 11578 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [26/Nov/2022:10:54:21 +0000] "GET /interviews/interview/637e52925f37937d55d9a31b HTTP/1.1" 200 7656 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
