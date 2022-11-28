@@ -25,7 +25,7 @@ A company constantly needs to download their data to compile different reports. 
 - AWS
 - Putty
 # Live project Link
-http://appplacement.com
+https://appplacement.com
 
 # Steps to set project locally[Windows]
 - Go to terminal. Run below command:
