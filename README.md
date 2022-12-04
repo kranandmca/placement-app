@@ -16,14 +16,15 @@ A company constantly needs to download their data to compile different reports. 
 - MongoDB
 - Javascript
 - EJS
+- Git
 - CSS
 - SCSS
 - MongoDB Compass
 - Visual Studio Code
 # Tools used for hosting
 - MongoDB Atlas
-- AWS
-- Putty
+- Railway
+- Git
 # Live project Link
 https://placement-app-production.up.railway.app/
 
