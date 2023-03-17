@@ -63,7 +63,7 @@ app.use(
       {
         // mongoUrl: 'mongodb://localhost',
         mongoUrl:
-          'mongodb+srv://placementapp:placementapp@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
+          'mongodb+srv://authentication:<password>@cluster0.fipg6ho.mongodb.net/?retryWrites=true&w=majority',
         dbName: 'placement',
         stringify: false,
         autoRemove: 'disabled',
