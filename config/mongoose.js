@@ -6,7 +6,7 @@ const env = require('./environment');
 // mongoose.connect('mongodb://localhost/placement');
 // For atlas
 mongoose.connect(
-  'mongodb+srv://authentication:<password>@cluster0.fipg6ho.mongodb.net/?retryWrites=true&w=majority'
+  'mongodb+srv://placementapp:<password>@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority'
 );
 const db = mongoose.connection;
 
