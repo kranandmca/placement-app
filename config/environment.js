@@ -14,7 +14,7 @@ const development = {
   asset_path: '/assets',
   session_cookie_key: '@1925',
   db: 'placement',
-  port:80,
+  port:3000,
   morgan: {
     mode: 'dev',
     options: { stream: accessLogStream },
