@@ -61,9 +61,9 @@ app.use(
     },
     store: MongoStore.create(
       {
-         mongoUrl: 'mongodb://localhost',
-//         mongoUrl:
-//           'mongodb+srv://placementapp:<password>@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
+        // mongoUrl: 'mongodb://localhost',
+        mongoUrl:
+          'mongodb+srv://placementapp:<password>@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
         dbName: 'placement',
         stringify: false,
         autoRemove: 'disabled',
