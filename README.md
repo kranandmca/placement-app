@@ -26,7 +26,7 @@ A company constantly needs to download their data to compile different reports. 
 - Railway
 - Git
 # Live project Link
-https://placementapp.onrender.com
+https://lernmern.com
 
 # Steps to set project locally[Windows]
 - Go to terminal. Run below command:
